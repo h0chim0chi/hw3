@@ -12,20 +12,20 @@ function pageLoad() {
   let passenger2 = ride[1]
   let passenger3 = ride[2]
 
-  //set levels of service by service line: Noober Pool, Noober Purple, Noober XL, Noober X
-  if (ride.length > 1 || ride[0].numberofPassengers ==1) {
-    levelofService = 'Noober Pool'
+  //set levelOfService by service line: Noober Pool, Noober Purple, Noober XL, Noober X
+  if (ride.length > 1 || ride[0].numberOfPassengers == 1) {
+    levelOfService = 'Noober Pool'
   } else if (ride[0].purpleRequested == true) {
-    levelofService = 'Noober Purple'
-  } else if (ride[0].numberofPassengers > 3) {
-    levelofService = 'Noober XL'
+    levelOfService = 'Noober Purple'
+  } else if (ride[0].numberOfPassengers > 3) {
+    levelOfService = 'Noober XL'
   } else {
-    levelofService = 'Noober X'
+    levelOfService = 'Noober X'
   }
 
   //log in console
 
-  console.log(levelofService)
+  console.log(levelOfService)
   console.log(ride.length)
 
   // these variables map to the elements on the finished page;
@@ -100,7 +100,6 @@ function pageLoad() {
     passenger3DropoffAddressLine1 = ride[2].dropoffLocation.address
     passenger3DropoffAddressLine2 = ride[2].dropoffLocation.city + ', ' + ride[2].dropoffLocation.state + ' ' + ride[2].dropoffLocation.zip
     passenger3NooberPurple = ride[2].purpleRequested
-  
   }
   
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
