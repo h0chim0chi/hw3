@@ -8,18 +8,8 @@ function pageLoad() {
   // e.g. ask 'ride' for its length or only grab the first member of the Array
   console.log(ride)
 
-  //set levelOfService by service line: Noober Pool, Noober Purple, Noober XL, Noober X
-  if (ride.length > 1 || ride[0].numberOfPassengers == 1) {
-    levelOfService = 'Noober Pool'
-  } else if (ride[0].purpleRequested == true) {
-    levelOfService = 'Noober Purple'
-  } else if (ride[0].numberOfPassengers > 3) {
-    levelOfService = 'Noober XL'
-  } else {
-    levelOfService = 'Noober X'
-  }
 
-  // these variables map to the elements on the finished page;
+    // these variables map to the elements on the finished page;
   // assign the proper value to each variable
 
   // levelOfService
@@ -34,6 +24,17 @@ function pageLoad() {
   // passenger3DropoffAddressLine1, passenger3DropoffAddressLine2
   
   //set conditions for passengers and level of service
+
+  //set levelOfService by service line: Noober Pool, Noober Purple, Noober XL, Noober X
+  if (ride.length > 1 || ride[0].numberOfPassengers == 1) {
+    levelOfService = 'Noober Pool'
+  } else if (ride[0].purpleRequested == true) {
+    levelOfService = 'Noober Purple'
+  } else if (ride[0].numberOfPassengers > 3) {
+    levelOfService = 'Noober XL'
+  } else {
+    levelOfService = 'Noober X'
+  }
 
   let passenger1 = ride[0]
   let passenger2 = ride[1]
