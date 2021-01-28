@@ -43,12 +43,19 @@ function pageLoad() {
   //if ride.length==1
   if (ride.length == 1) {
     passenger1Name = ride[0].passengerDetails.first + ' ' + ride[0].passengerDetails.last
+    console.log(passenger1Name)
     passenger1PickupAddressLine1 = ride[0].pickupLocation.address
+    console.log(passenger1PickupAddressLine1)
     passenger1PickupAddressLine2 = ride[0].pickupLocation.city + ', ' + ride[0].pickupLocation.state + ' ' + ride[0].pickupLocation.zip
+    console.log(passenger1PickupAddressLine2)
     passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address
+    console.log(passenger1DropoffAddressLine1)
     passenger1DropoffAddressLine2 = ride[0].dropoffLocation.city + ', ' + ride[0].dropoffLocation.state + ' ' + ride[0].dropoffLocation.zip
+    console.log(passenger1DropoffAddressLine2)
     passenger1Phone = ride[0].passengerDetails.phoneNumber
+    console.log(passenger1Phone)
     passenger1NumberOfPassengers = ride[0].numberOfPassengers
+    console.log(passenger1NumberOfPassengers)
     passenger1NooberPurple = ride[0].purpleRequested
   //if ride.length=2
   } else if (ride.length == 2) {
