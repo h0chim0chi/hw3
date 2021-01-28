@@ -8,10 +8,6 @@ function pageLoad() {
   // e.g. ask 'ride' for its length or only grab the first member of the Array
   console.log(ride)
 
-  let passenger1 = ride[0]
-  let passenger2 = ride[1]
-  let passenger3 = ride[2]
-
   //set levelOfService by service line: Noober Pool, Noober Purple, Noober XL, Noober X
   if (ride.length > 1 || ride[0].numberOfPassengers == 1) {
     levelOfService = 'Noober Pool'
@@ -22,11 +18,6 @@ function pageLoad() {
   } else {
     levelOfService = 'Noober X'
   }
-
-  //log in console
-
-  console.log(levelOfService)
-  console.log(ride.length)
 
   // these variables map to the elements on the finished page;
   // assign the proper value to each variable
@@ -43,6 +34,11 @@ function pageLoad() {
   // passenger3DropoffAddressLine1, passenger3DropoffAddressLine2
   
   //set conditions for passengers and level of service
+
+  let passenger1 = ride[0]
+  let passenger2 = ride[1]
+  let passenger3 = ride[2]
+
   //if ride.length==1
   if (ride.length == 1) {
     passenger1Name = ride[0].passengerDetails.first + ' ' + ride[0].passengerDetails.last
@@ -101,6 +97,10 @@ function pageLoad() {
     passenger3DropoffAddressLine2 = ride[2].dropoffLocation.city + ', ' + ride[2].dropoffLocation.state + ' ' + ride[2].dropoffLocation.zip
     passenger3NooberPurple = ride[2].purpleRequested
   }
+
+  //log in console
+  console.log(levelOfService)
+  console.log(ride.length)
   
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
