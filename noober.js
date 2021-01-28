@@ -26,7 +26,7 @@ function pageLoad() {
   //set conditions for passengers and level of service
 
   //set levelOfService by service line: Noober Pool, Noober Purple, Noober XL, Noober X
-  if (ride.length > 1 || ride[0].numberOfPassengers == 1) {
+  if (ride.length > 1) {
     levelOfService = 'Noober Pool'
   } else if (ride[0].purpleRequested == true) {
     levelOfService = 'Noober Purple'
